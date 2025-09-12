@@ -55,15 +55,15 @@ graph TD
 ```
 Brushed up on NLP and Attention Mechanisms:
 
-[Attention is All You Need](https://arxiv.org/abs/1706.03762)
+https://arxiv.org/abs/1706.03762
 
-[BERT: Pre-Training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805)
+https://arxiv.org/abs/1810.04805
 
 ## Researched Data Sources (9/4/25)
 
-[TwiBot-22: Towards Graph-Based Twitter Bot Detection](https://arxiv.org/abs/2206.04564)
+https://arxiv.org/abs/2206.04564
 
-[Russian Troll Tweets](https://github.com/fivethirtyeight/russian-troll-tweets/)
+https://github.com/fivethirtyeight/russian-troll-tweets/
 
 Researched viable datasets and found TwiBot-22 (Investigated for dataset completion --> looked through dataset)
 
@@ -167,7 +167,7 @@ graph TB
 ```
 ## Designed Attention Mechanism and Scoped More General Pipeline (9/5/25 ~1.5 hours Outside of Class)
 
-[Attention is All You Need](https://arxiv.org/abs/1706.03762)
+https://arxiv.org/abs/1706.03762
 ### Cascade Attention Mechanism
 
 ```mermaid
