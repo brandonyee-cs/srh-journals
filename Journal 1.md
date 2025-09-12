@@ -66,6 +66,7 @@ https://arxiv.org/abs/2206.04564
 https://github.com/fivethirtyeight/russian-troll-tweets/
 
 Researched viable datasets and found TwiBot-22 (Investigated for dataset completion --> looked through dataset)
+Not a good way to show the work but effectively I read through datasets to ensure they were complete for my intended usage.
 
 ## Designed Data Pipelines (9/5/25)
 
@@ -168,6 +169,8 @@ graph TB
 ## Designed Attention Mechanism and Scoped More General Pipeline (9/5/25 ~1.5 hours Outside of Class)
 
 https://arxiv.org/abs/1706.03762
+
+Designed attention mechanisms for accurate feature attentions for classification; designed a general detection pipeline and implementations.
 ### Cascade Attention Mechanism
 
 ```mermaid
@@ -339,3 +342,13 @@ graph LR
 3. **Supplement with Reddit bot lists** (platform diversity)
 4. **Train initial model** (you now have 250K+ labeled examples)
 5. **Validate on recent events** (apply to unlabeled recent data)
+
+## Brushed up on original proposed HPIT paper (9/10/25)
+--> This is the original general theoretical paper for Hybrid Physics-Informed Transformers and is not publicly available, so I attached it
+
+## Continued to reprove original proposed HPIT paper (9/11/25)
+--> Continued to read through old mathematical documentation and proofs to understand the model.
+
+**Note** While the paper and proposal are mine, they were originally drafted in 2023, this (or another project) is the project I plan on pursuing with Brown, the other project is my personal project.
+
+
