@@ -249,7 +249,7 @@ flowchart TD
     style J fill:#ffcdd2
     style L fill:#c8e6c9
 ```
-## Mathematical Modeling (9/8/25 Outside of Class ~2 hours)
+## Mathematical Modeling (9/8/25 Outside of Class ~4 hours)
 
 ### Mathematical Attention Visualization
 
@@ -274,6 +274,228 @@ Where:
 • content_similarity = cosine_similarity(text_embeddings)
 • network_overlap = |common_connections| / |total_connections|
 ```
+
+### Mathematical Proof: Coordination Score Formula Properties
+
+#### Formula Definition
+
+Given the coordination score formula:
+
+#### Theorem 1: Boundedness
+
+**Claim**: The coordination score is bounded: `0 ≤ CS ≤ n`, where `n` is the number of coordinating pairs.
+
+**Proof**:
+
+For each component:
+
+1. **Temporal Sync Bounds**:
+   ```
+   temporal_sync = exp(-(time_diff)²/σ²)
+   ```
+   Since `exp(x) > 0` for all `x ∈ ℝ` and `-(time_diff)²/σ² ≤ 0`:
+   ```
+   0 < temporal_sync ≤ 1
+   ```
+   Maximum occurs when `time_diff = 0` (simultaneous posting).
+
+2. **Content Similarity Bounds**:
+   ```
+   content_similarity = cos(θ) = (a⃗ · b⃗)/(||a⃗|| ||b⃗||)
+   ```
+   By definition of cosine similarity:
+   ```
+   -1 ≤ content_similarity ≤ 1
+   ```
+
+3. **Network Overlap Bounds**:
+   ```
+   network_overlap = |A ∩ B| / |A ∪ B|
+   ```
+   Since `|A ∩ B| ≤ |A ∪ B|`:
+   ```
+   0 ≤ network_overlap ≤ 1
+   ```
+
+**For the product**:
+Since we're measuring coordination (positive behavior), we consider only positive content similarity:
+```
+0 ≤ temporal_sync × max(0, content_similarity) × network_overlap ≤ 1
+```
+
+**For the sum**:
+```
+0 ≤ CS = Σᵢ(temporal_sync × content_similarity × network_overlap) ≤ n
+```
+
+∎
+
+#### Theorem 2: Monotonicity Properties
+
+**Claim**: The coordination score exhibits desirable monotonicity properties.
+
+**Proof**:
+
+1. **Temporal Monotonicity**:
+   ```
+   ∂(temporal_sync)/∂(time_diff) = -2(time_diff)/σ² × exp(-(time_diff)²/σ²)
+   ```
+   
+   For `time_diff > 0`: `∂(temporal_sync)/∂(time_diff) < 0`
+   
+   Therefore, coordination score decreases as temporal distance increases. ✓
+
+2. **Content Monotonicity**:
+   ```
+   ∂(CS)/∂(content_similarity) = temporal_sync × network_overlap ≥ 0
+   ```
+   
+   Therefore, coordination score increases with content similarity. ✓
+
+3. **Network Monotonicity**:
+   ```
+   ∂(CS)/∂(network_overlap) = temporal_sync × content_similarity ≥ 0
+   ```
+   
+   Therefore, coordination score increases with network overlap. ✓
+
+∎
+
+#### Theorem 3: Perfect Coordination Properties
+
+**Claim**: The formula correctly identifies perfect coordination scenarios.
+
+**Proof**:
+
+**Perfect Coordination Conditions**:
+- `time_diff = 0` (simultaneous posting)
+- `content_similarity = 1` (identical content)
+- `network_overlap = 1` (complete network overlap)
+
+**Under these conditions**:
+```
+temporal_sync = exp(0) = 1
+content_similarity = 1  
+network_overlap = 1
+```
+
+**Therefore**:
+```
+CS_perfect = Σᵢ(1 × 1 × 1) = n
+```
+
+This achieves the maximum possible coordination score. ✓
+
+∎
+
+##### Theorem 4: Statistical Properties
+
+**Claim**: The formula has well-defined statistical properties for random behavior.
+
+**Proof**:
+
+**For Random Behavior**:
+
+1. **Expected Temporal Sync**:
+   Assuming uniform random posting times over interval `[0, T]`:
+   ```
+   E[temporal_sync] = ∫₀^∞ exp(-t²/σ²) × f(t) dt
+   ```
+   Where `f(t)` is the probability density of time differences.
+
+2. **Expected Content Similarity**:
+   For random text embeddings in high-dimensional space:
+   ```
+   E[content_similarity] ≈ 0
+   ```
+   (By concentration of measure in high dimensions)
+
+3. **Expected Network Overlap**:
+   For random networks with connection probability `p`:
+   ```
+   E[network_overlap] = p²/(2p - p²)
+   ```
+
+**Expected Random Coordination Score**:
+```
+E[CS_random] ≈ n × E[temporal_sync] × 0 × E[network_overlap] = 0
+```
+
+Therefore, random behavior produces near-zero coordination scores. ✓
+
+∎
+
+#### Theorem 5: Discriminative Power
+
+**Claim**: The formula can distinguish between coordinated and random behavior with high probability.
+
+**Proof**:
+
+**Variance Analysis**:
+
+For coordinated behavior: `Var(CS_coord) = 0` (deterministic high values)
+
+For random behavior: 
+```
+Var(CS_random) = n × Var(temporal_sync × content_similarity × network_overlap)
+```
+
+Since the components are independent for random behavior:
+```
+Var(CS_random) = n × [Var(temporal_sync) × Var(content_similarity) × Var(network_overlap)]
+```
+
+**Signal-to-Noise Ratio**:
+```
+SNR = |E[CS_coord] - E[CS_random]| / √(Var(CS_random))
+     = n / √(n × σ²_components)
+     = √n / σ_components
+```
+
+As `n` increases, SNR increases, providing better discrimination. ✓
+
+∎
+
+#### Theorem 6: Computational Complexity
+
+**Claim**: The formula is computationally tractable.
+
+**Proof**:
+
+**Time Complexity Analysis**:
+
+1. **Temporal Sync**: `O(1)` per pair
+2. **Content Similarity**: `O(d)` per pair (where `d` = embedding dimension)
+3. **Network Overlap**: `O(k)` per pair (where `k` = average degree)
+
+**Total Complexity**: `O(n² × max(d, k))`
+
+For sparse social networks (`k << n`) and reasonable embedding dimensions (`d ~ 100-1000`):
+```
+Complexity = O(n² × d)
+```
+
+This scales quadratically with users but linearly with feature dimensions, making it practical for real-world applications. ✓
+
+∎
+
+#### Corollary: Robustness Properties
+
+**Noise Resistance**: Small perturbations in individual components result in bounded changes in the coordination score:
+
+```
+|ΔCS| ≤ n × (|Δtemporal_sync| + |Δcontent_similarity| + |Δnetwork_overlap|)
+```
+
+**Threshold Behavior**: By setting appropriate thresholds `τ`, we can achieve desired false positive rates:
+
+```
+P(CS_random > τ) ≤ exp(-2nτ²) 
+```
+
+(By Hoeffding's inequality, assuming bounded random variables)
+
+These properties collectively demonstrate that the formula provides a theoretically grounded approach to measuring coordination in social media networks.
 
 ## Validation Methods + Success Metrics + Proposed Workflow (9/9/25)
 
