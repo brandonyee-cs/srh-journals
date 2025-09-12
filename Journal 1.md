@@ -272,7 +272,7 @@ Where:
 • network_overlap = |common_connections| / |total_connections|
 ```
 
-## Validation Methods (9/9/25)
+## Validation Methods + Success Metrics + Proposed Workflow(9/9/25)
 
 ### Training Data Sources and Labels
 
