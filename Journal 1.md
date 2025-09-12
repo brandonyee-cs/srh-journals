@@ -1,4 +1,4 @@
-## Research Concept:
+## Research Concept (9/2/25 Outside of Class):
 
 ### Neural Architecture for Detecting Coordinated Inauthentic Behavior in Digital Communications
 
@@ -11,9 +11,14 @@ polyci -> Combatting Fake News
 machine learning -> Novel Fusion Method
 Dataset -> kaggle + seperate repository (master dataset compiled from both)
 
-## CAN-CBD Model Architecture with Visual Diagrams
+## Sweezy Notes + Model Architecture Notes (9/3/25):
 
-### Overall Architecture Flow
+Through WHS --> Access to Nature, JSTOR & other general research libraries.
+
+Most insightful was access to Nature, which can be very useful for researching novel (and often ground-breaking) literature.
+The rest was mostly repetitive, because I have become quite familiar with library resources over the years.
+
+### Designed Overall Architecture Flow
 
 ```mermaid
 graph TD
@@ -48,6 +53,21 @@ graph TD
     style F fill:#fff3e0
     style J fill:#f3e5f5
 ```
+Brushed up on NLP and Attention Mechanisms:
+
+[Attention is All You Need](https://arxiv.org/abs/1706.03762)
+
+[BERT: Pre-Training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805)
+
+## Researched Data Sources (9/4/25)
+
+[TwiBot-22: Towards Graph-Based Twitter Bot Detection](https://arxiv.org/abs/2206.04564)
+
+[Russian Troll Tweets](https://github.com/fivethirtyeight/russian-troll-tweets/)
+
+Researched viable datasets and found TwiBot-22 (Investigated for dataset completion --> looked through dataset)
+
+## Designed Data Pipelines (9/5/25)
 
 ### Data Flow Architecture
 
@@ -101,6 +121,53 @@ graph LR
     style L fill:#e3f2fd
 ```
 
+### Training Data Structure
+
+```mermaid
+graph TB
+    subgraph "Labeled Training Data"
+        A[Known Bot Accounts<br/>25,000 examples]
+        B[Confirmed Human Accounts<br/>50,000 examples]
+        C[Coordinated Groups<br/>500 documented cases]
+        D[Individual Bad Acts<br/>2,000 examples]
+    end
+    
+    subgraph "Feature Categories"
+        E[Text Features<br/>• Message content<br/>• Language patterns<br/>• Sentiment scores]
+        F[Behavioral Features<br/>• Posting frequency<br/>• Response timing<br/>• Activity patterns]
+        G[Network Features<br/>• Follower patterns<br/>• Interaction graphs<br/>• Clustering coefficients]
+        H[Temporal Features<br/>• Account age<br/>• Post timing<br/>• Coordination windows]
+    end
+    
+    subgraph "Label Types"
+        I[Binary Labels<br/>Bot vs Human]
+        J[Coordination Labels<br/>Group membership]
+        K[Campaign Labels<br/>Operation affiliation]
+    end
+    
+    A --> E
+    A --> F
+    A --> G
+    A --> H
+    
+    B --> E
+    B --> F
+    B --> G
+    B --> H
+    
+    E --> I
+    F --> I
+    G --> J
+    H --> K
+    
+    style A fill:#ffcdd2
+    style B fill:#c8e6c9
+    style E fill:#e1f5fe
+    style I fill:#f3e5f5
+```
+## Designed Attention Mechanism and Scoped More General Pipeline (9/5/25 Outside of Class)
+
+[Attention is All You Need](https://arxiv.org/abs/1706.03762)
 ### Cascade Attention Mechanism
 
 ```mermaid
@@ -146,51 +213,6 @@ graph TD
     style K fill:#f8bbd9
 ```
 
-### Training Data Structure
-
-```mermaid
-graph TB
-    subgraph "Labeled Training Data"
-        A[Known Bot Accounts<br/>25,000 examples]
-        B[Confirmed Human Accounts<br/>50,000 examples]
-        C[Coordinated Groups<br/>500 documented cases]
-        D[Individual Bad Acts<br/>2,000 examples]
-    end
-    
-    subgraph "Feature Categories"
-        E[Text Features<br/>• Message content<br/>• Language patterns<br/>• Sentiment scores]
-        F[Behavioral Features<br/>• Posting frequency<br/>• Response timing<br/>• Activity patterns]
-        G[Network Features<br/>• Follower patterns<br/>• Interaction graphs<br/>• Clustering coefficients]
-        H[Temporal Features<br/>• Account age<br/>• Post timing<br/>• Coordination windows]
-    end
-    
-    subgraph "Label Types"
-        I[Binary Labels<br/>Bot vs Human]
-        J[Coordination Labels<br/>Group membership]
-        K[Campaign Labels<br/>Operation affiliation]
-    end
-    
-    A --> E
-    A --> F
-    A --> G
-    A --> H
-    
-    B --> E
-    B --> F
-    B --> G
-    B --> H
-    
-    E --> I
-    F --> I
-    G --> J
-    H --> K
-    
-    style A fill:#ffcdd2
-    style B fill:#c8e6c9
-    style E fill:#e1f5fe
-    style I fill:#f3e5f5
-```
-
 ### Detection Pipeline
 
 ```mermaid
@@ -224,6 +246,7 @@ flowchart TD
     style J fill:#ffcdd2
     style L fill:#c8e6c9
 ```
+## Mathematical Modeling (9/8/25 Outside of Class (2 hours)
 
 ### Mathematical Attention Visualization
 
