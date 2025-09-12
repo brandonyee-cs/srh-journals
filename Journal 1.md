@@ -272,6 +272,8 @@ Where:
 • network_overlap = |common_connections| / |total_connections|
 ```
 
+## Validation Methods (9/9/25)
+
 ### Training Data Sources and Labels
 
 #### Ground Truth Hierarchy
@@ -300,18 +302,6 @@ graph TD
     style K fill:#ffcdd2
 ```
 
-### Model Performance Metrics
-
-#### Evaluation Framework
-
-| Metric | Target | Reasoning |
-|--------|--------|-----------|
-| **Precision** | >85% | Minimize false accusations |
-| **Recall** | >75% | Catch most coordinated behavior |
-| **F1-Score** | >80% | Balanced performance |
-| **False Positive Rate** | <5% | Protect legitimate users |
-| **Detection Speed** | <100ms | Real-time capability |
-
 #### Cross-Validation Strategy
 ```mermaid
 graph LR
@@ -329,6 +319,18 @@ graph LR
     style C fill:#fff3e0
     style D fill:#ffebee
 ```
+
+### Model Performance Metrics
+
+#### Evaluation Framework
+
+| Metric | Target | Reasoning |
+|--------|--------|-----------|
+| **Precision** | >85% | Minimize false accusations |
+| **Recall** | >75% | Catch most coordinated behavior |
+| **F1-Score** | >80% | Balanced performance |
+| **False Positive Rate** | <5% | Protect legitimate users |
+| **Detection Speed** | <100ms | Real-time capability |
 
 ### Implementation Notes
 **Workflow**:
