@@ -246,7 +246,7 @@ flowchart TD
     style J fill:#ffcdd2
     style L fill:#c8e6c9
 ```
-## Mathematical Modeling (9/8/25 Outside of Class (2 hours)
+## Mathematical Modeling (9/8/25 Outside of Class ~2 hours)
 
 ### Mathematical Attention Visualization
 
@@ -272,7 +272,7 @@ Where:
 • network_overlap = |common_connections| / |total_connections|
 ```
 
-## Validation Methods + Success Metrics + Proposed Workflow(9/9/25)
+## Validation Methods + Success Metrics + Proposed Workflow (9/9/25)
 
 ### Training Data Sources and Labels
 
