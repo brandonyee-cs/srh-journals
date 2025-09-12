@@ -1,4 +1,4 @@
-## Research Concept (9/2/25 Outside of Class):
+## Research Concept (9/2/25 Outside of Class 30mins):
 
 ### Neural Architecture for Detecting Coordinated Inauthentic Behavior in Digital Communications
 
@@ -165,7 +165,7 @@ graph TB
     style E fill:#e1f5fe
     style I fill:#f3e5f5
 ```
-## Designed Attention Mechanism and Scoped More General Pipeline (9/5/25 Outside of Class)
+## Designed Attention Mechanism and Scoped More General Pipeline (9/5/25 ~1.5 hours Outside of Class)
 
 [Attention is All You Need](https://arxiv.org/abs/1706.03762)
 ### Cascade Attention Mechanism
