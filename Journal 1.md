@@ -562,7 +562,7 @@ graph LR
 1. **Download TwiBot-20** (largest, most comprehensive)
 2. **Add Russian IRA data** (political coordination examples)
 3. **Supplement with Reddit bot lists** (platform diversity)
-4. **Train initial model** (you now have 250K+ labeled examples)
+4. **Train initial model** (now have 250K+ labeled examples)
 5. **Validate on recent events** (apply to unlabeled recent data)
 
 ## Brushed up on original proposed HPIT paper (9/10/25)
