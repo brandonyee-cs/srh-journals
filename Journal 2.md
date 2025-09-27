@@ -5,6 +5,7 @@
 ## September 15, 2025 2 hours outside of class
 
 In class, I did Journal 1 revisions. 
+
 **Focus:** Architecture Analysis & Setup
 This is like building a weather prediction system that learns from data but also respects physics laws like conservation of energy. We're combining AI pattern-recognition with the reliability of fundamental physics.
 
