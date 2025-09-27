@@ -2,7 +2,7 @@
 *Hybrid Physics-Informed Transformer for Multi-Scale Temporal Forecasting*
 ---
 
-## September 15, 2025
+## September 15, 2025 1 hour outside of class
 **Focus:** Architecture Analysis & Setup
 This is like building a weather prediction system that learns from data but also respects physics laws like conservation of energy. We're combining AI pattern-recognition with the reliability of fundamental physics.
 
@@ -155,7 +155,7 @@ graph TD
 
 ---
 
-## September 18, 2025
+## September 18, 2025 2 hours outside of class
 **Focus:** Physics Constraint Framework
 
 This adds a 'physics referee' that prevents the AI from making predictions that violate natural laws like conservation of mass or energy. It's like building a mathematical rule-checker that ensures the AI's forecasts remain physically realistic.
