@@ -2,7 +2,9 @@
 *Hybrid Physics-Informed Transformer for Multi-Scale Temporal Forecasting*
 ---
 
-## September 15, 2025 1 hour outside of class
+## September 15, 2025 2 hours outside of class
+
+In class, I did Journal 1 revisions. 
 **Focus:** Architecture Analysis & Setup
 This is like building a weather prediction system that learns from data but also respects physics laws like conservation of energy. We're combining AI pattern-recognition with the reliability of fundamental physics.
 
@@ -43,7 +45,7 @@ graph TB
 
 ---
 
-## September 16, 2025  
+## September 16, 2025  4 hours outside of class
 **Focus:** Multi-Scale Attention Implementation
 Think of this as giving the AI multiple 'ears' to listen for patterns at different time scales - some catch rapid changes in minutes, others focus on long-term trends over months or years.
 
@@ -98,7 +100,7 @@ graph LR
 
 ---
 
-## September 17, 2025
+## September 17, 2025 3.5 hour outside of class
 **Focus:** Scale Combination & Positional Encoding
 
 Now we teach the AI to blend information from all those different time scales, like a conductor mixing fast and slow musical parts. We also give the AI a sense of "time position" so it knows whether it's looking at morning vs evening data.
@@ -155,7 +157,7 @@ graph TD
 
 ---
 
-## September 18, 2025 2 hours outside of class
+## September 18, 2025 6 hours outside of class
 **Focus:** Physics Constraint Framework
 
 This adds a 'physics referee' that prevents the AI from making predictions that violate natural laws like conservation of mass or energy. It's like building a mathematical rule-checker that ensures the AI's forecasts remain physically realistic.
@@ -214,7 +216,7 @@ graph LR
 
 ---
 
-## September 19, 2025
+## September 19, 2025 2 hours outside of class
 **Focus:** Physics Loss Implementation
 We create a penalty system where the AI 'feels bad' for violating physics laws, even if the violation helps fit the data better. This teaches the AI to balance accuracy with physical realism.
 
@@ -284,7 +286,7 @@ Testing on simple 1D heat equation: ∂u/∂t = α∇²u
 
 ---
 
-## September 22, 2025
+## September 22, 2025 4 hours outside of class
 **Focus:** Complete Loss Integration & Optimization
 
 This combines all components into one training system, like a report card that grades the AI on accuracy, physics compliance, and simplicity. The optimization is the AI doing repeated practice sessions to improve its overall grade.
@@ -352,7 +354,7 @@ Based on Theorem 3.1, implemented convergence monitoring:
 
 ---
 
-## September 24, 2025
+## September 24, 2025 2 hours outside of class
 **Focus:** Testing Framework & Validation
 
 This is like taking our AI to a comprehensive exam to verify it works as advertised across different types of problems. We test whether it can learn complex patterns, still follows physics rules, and remains stable when inputs change slightly.
@@ -433,7 +435,7 @@ The HPIT implementation successfully satisfies all theoretical guarantees:
 
 ---
 
-## September 26, 2025
+## September 26, 2025 1 hour outside of class
 **Focus:** Final Integration & Results Summary
 This is the final demonstration day where we show our complete AI system can accurately predict scientific phenomena while respecting physics laws. We measure not just accuracy, but also speed, reliability, and practical usability for real scientists.
 
