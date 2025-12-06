@@ -2,7 +2,7 @@
 *Prometheus Completion & TLR4 Binding Affinity Prediction*
 ---
 
-## November 24, 2025 - Class time + 8 hours outside of class
+## November 24, 2025 - Class time + 6 hours outside of class
 **Focus:** Prometheus Advanced Validation & Novel Physics Exploration
 
 We're now stress-testing our discovery system on genuinely challenging physics problems. This goes beyond validation on known systems - we're exploring exotic models where even theoretical predictions are uncertain or incomplete.
@@ -221,7 +221,7 @@ graph TB
 
 ---
 
-## November 25, 2025 - Class time + 10 hours outside of class  
+## November 25, 2025 - Class time + 6 hours outside of class  
 **Focus:** Topological Phase Detection & Quantum Phase Transitions
 
 Moving beyond classical critical phenomena to quantum phase transitions and topological order - where conventional order parameters don't exist and new mathematical machinery is required.
