@@ -143,7 +143,9 @@ Part I complete.
 ---
 
 ## March 5, 2026 — Class time + 8 hours outside of class
-**Focus:** Part II — Prometheus Adaptation and PIC Data Generation Pipeline
+**Focus:** DEMO Presentation + Part II — Prometheus Adaptation and PIC Data Generation Pipeline
+
+Gave my mock CSEF presentation with Wilson and Max.
 
 This session was about setting up the machine learning side of the paper — adapting the Prometheus VAE framework (originally built for magnetic phase transitions) to instead detect the onset of collective behavior in a simulated particle beam, using a quantity called the structure factor as the input signal. The evening was mostly debugging the particle-in-cell simulations that generate the training data.
 
